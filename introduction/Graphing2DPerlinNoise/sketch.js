@@ -14,6 +14,7 @@ function draw() {
     for (let x = 0; x < height; x += 1) {
       let index = (x + y * width) * 4;
       let r = noise(xoff, yoff) * 255;
+      // let r = random() * 255;
 
       pixels[index + 0] = r;
       pixels[index + 1] = r;
