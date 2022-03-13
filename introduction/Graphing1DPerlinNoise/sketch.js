@@ -1,3 +1,6 @@
+let inc = 0.01;
+let start = 0;
+
 function setup() {
   createCanvas(800, 800);
 }
@@ -8,15 +11,14 @@ function draw() {
   noFill();
 
   beginShape();
-  let xoff = 0;
+  let xoff = start;
   for (let x = 0; x < width; x += 1) {
     stroke(255);
     let y = noise(xoff) * height;
     vertex(x, y);
 
-    xoff += 0.02;
+    xoff += inc;
   }
   endShape();
-
-  updatePixels();
+  start += inc;
 }
