@@ -34,7 +34,7 @@ function draw() {
       let index = x + y * cols;
       let angle = noise(xoff, yoff, zoff) * TWO_PI;
       let v = p5.Vector.fromAngle(angle);
-      v.setMag(1);
+      v.setMag(4);
       flowField[index] = v;
       xoff += inc;
 
